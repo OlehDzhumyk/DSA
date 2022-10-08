@@ -6,10 +6,10 @@ import model.Vertex;
 public class CareerSolver {
 
 
-    public int solve(Graph graph) {
+    public void solve(Graph graph) {
 
-        Integer max;
-        max = visit(graph, 0);
+        CareerWriter writer = new CareerWriter();
+        writer.writeToFile(visit(graph, 0));
 
         Vertex runVertex = graph.vertices.get(0);
 
@@ -17,8 +17,8 @@ public class CareerSolver {
             System.out.println(runVertex.experience);
             runVertex = graph.vertices.get(runVertex.indexOfBetterWay);
         }
-        System.out.println();
-        return max;
+
+
     }
 
     Integer visit(Graph graph, int currentIndex) {

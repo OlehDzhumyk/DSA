@@ -6,10 +6,10 @@ public class Career {
     public static void main(String[] args) {
 
         CareerReader reader = new CareerReader();
-        Graph graph = reader.setUpGraph("src/main/resources/career3.in");
+        Graph graph = reader.setUpGraph("src/main/resources/career2.in.txt");
 
         CareerSolver solver = new CareerSolver();
-        System.out.println(solver.solve(graph));
+        solver.solve(graph);
 
     }
 
