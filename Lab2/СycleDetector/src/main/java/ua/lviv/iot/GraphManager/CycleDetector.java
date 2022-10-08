@@ -9,8 +9,8 @@ import java.util.*;
 
 public class CycleDetector {
     boolean visit(Vertex vertex, Set<Vertex> visited, Stack<Vertex> previous) {
-        boolean result = false;
         visited.add(vertex);
+
         for (Vertex adj : vertex.compatibleVertices) {
 
             if (!adj.equals(previous.peek())) {
@@ -26,7 +26,7 @@ public class CycleDetector {
             }
         }
 
-        return result;
+        return false;
     }
 
     boolean hasCycle(Graph graph) {

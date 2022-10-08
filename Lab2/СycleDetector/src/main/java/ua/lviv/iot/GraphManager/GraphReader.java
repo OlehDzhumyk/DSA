@@ -1,5 +1,3 @@
-
-
 package ua.lviv.iot.GraphManager;
 
 import ua.lviv.iot.GraphModel.Graph;
@@ -43,10 +41,10 @@ public class GraphReader {
 
             while (matcherForVertex.find()) {
 
-                key = matcherForVertex.group().substring(1,matcherForVertex.group().length()-1);
+                key = matcherForVertex.group().substring(1, matcherForVertex.group().length() - 1);
 
-                for (Vertex vertex : graph.adjacencyList){
-                    if (key.equals(vertex.key)){
+                for (Vertex vertex : graph.adjacencyList) {
+                    if (key.equals(vertex.key)) {
                         graph.adjacencyList.get(i).compatibleVertices.add(vertex);
                     }
                 }
