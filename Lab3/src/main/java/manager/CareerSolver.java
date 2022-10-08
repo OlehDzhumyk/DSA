@@ -12,12 +12,12 @@ public class CareerSolver {
         writer.writeToFile(visit(graph, 0));
 
         Vertex runVertex = graph.vertices.get(0);
+        System.out.println(runVertex.experience);
 
         while (runVertex.indexOfBetterWay != null) {
-            System.out.println(runVertex.experience);
             runVertex = graph.vertices.get(runVertex.indexOfBetterWay);
+            System.out.println(runVertex.experience);
         }
-
 
     }
 
