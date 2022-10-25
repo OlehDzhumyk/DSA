@@ -26,5 +26,3 @@ hs_err_pid*
 *.iml
 *.DS_Store
 *target/
-*lab1
-*lab2
